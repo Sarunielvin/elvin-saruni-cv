@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvin Meritei - Digital Marketing Strategist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #2c3e50;
+            background: #f8f9fa;
+            font-size: 11pt;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a5f5f 0%, #2d8b8b 100%);
+            color: white;
+            padding: 30px 40px 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .name {
+            font-size: 32pt;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        .tagline {
+            font-size: 14pt;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 9.5pt;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .main-content {
+            padding: 35px 40px;
+        }
+        
+        .section {
+            margin-bottom: 28px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #1a5f5f;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2.5px solid #1a5f5f;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .summary-text {
+            text-align: justify;
+            line-height: 1.6;
+            color: #34495e;
+            font-size: 10.5pt;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #e8f5f5 0%, #f0f8f8 100%);
+            border-left: 4px solid #1a5f5f;
+            padding: 12px 15px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 20pt;
+            font-weight: 700;
+            color: #1a5f5f;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 8.5pt;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 3px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-size: 11.5pt;
+            font-weight: 700;
+            color: #1a5f5f;
+            display: inline;
+        }
+        
+        .job-company {
+            font-size: 10.5pt;
+            color: #555;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        
+        .job-date-location {
+            font-size: 9.5pt;
+            color: #777;
+            font-style: italic;
+            margin-top: 2px;
+        }
+        
+        .achievements-list {
+            margin-left: 18px;
+            margin-top: 8px;
+        }
+        
+        .achievements-list li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+            font-size: 10pt;
+            color: #444;
+        }
+        
+        .achievements-list strong {
+            color: #1a5f5f;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .skill-category {
+            font-size: 9.5pt;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 3px solid #1a5f5f;
+        }
+        
+        .skill-category strong {
+            color: #1a5f5f;
+            display: block;
+            margin-bottom: 3px;
+            font-size: 9.5pt;
+        }
+        
+        .cert-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            font-size: 10pt;
+            padding: 6px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .cert-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .cert-issuer {
+            color: #777;
+            font-size: 9pt;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #1a5f5f;
+        }
+        
+        .institution {
+            font-size: 10pt;
+            color: #555;
+            margin-top: 2px;
+        }
+        
+        .edu-date {
+            font-size: 9pt;
+            color: #777;
+            font-style: italic;
+        }
+        
+        .qr-section {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 8px;
+        }
+        
+        .qr-text {
+            font-size: 8.5pt;
+            color: #666;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .main-content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://raw.githubusercontent.com/Sarunielvin/elvin-saruni-cv/main/elvin-professional.jpg" 
+                 alt="Elvin Meritei" 
+                 class="profile-photo"
+                 onerror="this.style.display='none';">
+            <h1 class="name">ELVIN MERITEI</h1>
+            <p class="tagline">Digital Marketing Strategist | Growth Architect | Performance Optimizer</p>
+            <div class="contact-bar">
+                <div class="contact-item">📧 sarunielvin@gmail.com</div>
+                <div class="contact-item">📱 +44115559094</div>
+                <div class="contact-item">📍 Nairobi, Kenya</div>
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/elvin-saruni-6b197b339/" target="_blank">💼 LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://elvins-digital-growth.vercel.app/" target="_blank">🌐 Portfolio</a>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title">Executive Summary</h2>
+                <p class="summary-text">
+                    Results-driven Digital Marketing Strategist with 3+ years of experience delivering measurable growth across paid media, SEO, e-commerce optimization, and marketing automation. Certified programmatic advertiser (Trade Desk, Meta, Google) with proven expertise in scaling revenue by 30-40% through data-driven strategies. Combined background in behavioral psychology and technical implementation enables creation of high-converting, human-centered campaigns. Track record of managing 227K+ monthly events, optimizing 1.26K+ product catalogs, and building automation systems that save 15+ hours weekly. Specialized in integrating advanced analytics, psychological principles, and emerging AI technologies to drive sustainable business growth.
+                </p>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Key Performance Metrics</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-number">227K</span>
+                        <span class="stat-label">Monthly Events Managed</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">38%</span>
+                        <span class="stat-label">ROI Improvement</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">35%</span>
+                        <span class="stat-label">Conversion Rate Lift</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">93/100</span>
+                        <span class="stat-label">Technical SEO Score</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Brand Visibility Increase</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">Client Revenue Growth</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Digital Marketing Strategist & SEO Specialist</div>
+                    </div>
+                    <div class="job-company">Adele Dejak Jewelry Brand Ltd | Nairobi, Kenya</div>
+                    <div class="job-date-location">January 2025 – September 2025 (9 months)</div>
+                    <ul class="achievements-list">
+                        <li><strong>Increased brand visibility by 40%</strong> through integrated digital marketing strategies combining SEO, PPC campaigns, and social media marketing across multiple platforms</li>
+                        <li><strong>Achieved 93/100 Best Practices score</strong> by implementing advanced Shopify customizations including JSON-LD schemas, pagination optimization, and rendering improvements</li>
+                        <li><strong>Reduced indexing time by 93%</strong> (from 2 weeks to 48 hours) through custom Python automation for URL submission to Google Search Console</li>
+                        <li><strong>Generated 846 clicks with 15.1% MoM growth</strong> by managing Google Merchant Center catalog of 1,260 products with optimized product feeds</li>
+                        <li><strong>Drove 227K events with 16K active users</strong> and achieved 63.4% growth rate through optimized Google Analytics 4 tracking implementation</li>
+                        <li><strong>Expanded reach by 25%</strong> through strategic ambassador partnerships and targeted email marketing campaigns using Klaviyo automation</li>
+                        <li><strong>Improved audience engagement by 45%</strong> through data-driven remarketing strategies and personalized ad messaging</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Freelance Digital Marketing Consultant</div>
+                    </div>
+                    <div class="job-company">Independent Practice | Remote</div>
+                    <div class="job-date-location">April 2024 – Present (18 months)</div>
+                    <ul class="achievements-list">
+                        <li><strong>Increased client revenue by up to 30%</strong> through multi-platform campaigns across Meta Ads, Google Ads, and programmatic platforms (MGID, DV360)</li>
+                        <li><strong>Improved audience engagement by 45%</strong> by implementing sophisticated remarketing strategies and personalized ad sequences</li>
+                        <li><strong>Optimized conversion tracking across 15+ client accounts</strong> through comprehensive Google Tag Manager configuration and custom event tracking</li>
+                        <li><strong>Delivered 12+ strategic campaign reports</strong> to C-level stakeholders with actionable insights and ROI analysis</li>
+                        <li><strong>Built 3 production-ready marketing automation systems</strong> using n8n, saving clients 15+ hours weekly in manual processes</li>
+                        <li><strong>Achieved 35% conversion rate improvement</strong> by applying behavioral psychology principles to landing page design and ad copy</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Entrepreneur & Business Operations Manager</div>
+                    </div>
+                    <div class="job-company">Multi-Business Portfolio | Thika, Kenya</div>
+                    <div class="job-date-location">June 2021 – July 2023 (2 years 2 months)</div>
+                    <ul class="achievements-list">
+                        <li><strong>Successfully managed operations for 3 concurrent businesses</strong> demonstrating proficiency in strategic planning, financial management, and client relationship management</li>
+                        <li><strong>Increased staff productivity by 40%</strong> through implementation of profit-sharing system that aligned employee incentives with business outcomes</li>
+                        <li><strong>Built engaged online communities of 500+ members</strong> on Facebook and WhatsApp for customer engagement and market research</li>
+                        <li><strong>Reduced customer acquisition costs by 25%</strong> through community-driven referral programs and word-of-mouth marketing</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <strong>Paid Media & Programmatic</strong>
+                        Meta Ads, Google Ads (Search, Display, Performance Max), The Trade Desk, MGID, DV360, RTB Platforms
+                    </div>
+                    <div class="skill-category">
+                        <strong>SEO & Technical Optimization</strong>
+                        Technical SEO, Schema Markup, Core Web Vitals, Google Search Console, Shopify Development
+                    </div>
+                    <div class="skill-category">
+                        <strong>Email & Marketing Automation</strong>
+                        Klaviyo (DKIM/DMARC, Advanced Flows), n8n Workflows, Zapier, API Integrations
+                    </div>
+                    <div class="skill-category">
+                        <strong>Analytics & Data</strong>
+                        Google Analytics 4, Google Tag Manager, Data Studio, Conversion Rate Optimization, A/B Testing
+                    </div>
+                    <div class="skill-category">
+                        <strong>E-commerce Platforms</strong>
+                        Shopify Customization, Google Merchant Center, Product Feed Optimization, JSON-LD Implementation
+                    </div>
+                    <div class="skill-category">
+                        <strong>Programming & Development</strong>
+                        Python (Automation Scripts), API Integration, Basic Web Development, Git Version Control
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Professional Certifications</h2>
+                <div class="cert-item">
+                    <span class="cert-name">Marketing Essentials - Programmatic Advertising</span>
+                    <span class="cert-issuer">The Trade Desk (2025)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">Google Digital Marketing & E-commerce Professional Certificate</span>
+                    <span class="cert-issuer">Google via Coursera (2024)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">Meta Ads Blueprint Certification</span>
+                    <span class="cert-issuer">Meta (2024)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">Google Ads Certification (Search, Display, Video)</span>
+                    <span class="cert-issuer">Google Skillshop (2024)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">Positive Psychology: Science & Applications</span>
+                    <span class="cert-issuer">University of Pennsylvania via Coursera (2024)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">Social Media Marketing Professional Certificate</span>
+                    <span class="cert-issuer">Meta via Coursera (2024)</span>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="degree">Diploma in Neurolinguistic Programming (NLP)</div>
+                    <div class="institution">Indiana University, India</div>
+                    <div class="edu-date">Expected Graduation: October 2025</div>
+                    <p style="font-size: 9.5pt; color: #555; margin-top: 5px; line-height: 1.5;">
+                        Advanced study in persuasive communication, behavioral psychology, and customer decision-making patterns with direct applications to marketing strategy and sales optimization.
+                    </p>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Diploma in Special Needs Education</div>
+                    <div class="institution">Mount Kenya University, Thika</div>
+                    <div class="edu-date">Graduated: 2023</div>
+                    <p style="font-size: 9.5pt; color: #555; margin-top: 5px; line-height: 1.5;">
+                        Developed expertise in adaptive communication, inclusive design, and understanding diverse audience needs—directly applicable to creating accessible, human-centered marketing campaigns.
+                    </p>
+                </div>
+            </section>
+            
+            <div class="qr-section">
+                <img src="https://quickchart.io/qr?text=https://elvins-digital-growth.vercel.app/&size=120" 
+                     alt="Portfolio QR Code" 
+                     class="qr-code"
+                     onerror="this.src='https://chart.googleapis.com/chart?chs=120x120&cht=qr&chl=https://elvins-digital-growth.vercel.app/'">
+                <p class="qr-text">Scan to view portfolio & additional work samples</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
